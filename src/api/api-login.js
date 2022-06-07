@@ -12,10 +12,10 @@ export const userLogin = (email, password) => {
 
   fetch("http://206.189.91.54//api/v1/auth/sign_in", requestOptions)
     .then(response => {
-      console.log(response.headers.get('access-token'));
-      console.log(response.headers.get('client'));
-      console.log(response.headers.get('expiry'));
-      console.log(response.headers.get('uid'));
+      localStorage.setItem("access-token", JSON.stringify(response.headers.get('access-token')));
+      localStorage.setItem("client", JSON.stringify(response.headers.get('client')));
+      localStorage.setItem("expiry", JSON.stringify(response.headers.get('expiry')));
+      localStorage.setItem("uid", JSON.stringify(response.headers.get('uid')));
       return response.json();
     })
     .then(result => console.log(result))
