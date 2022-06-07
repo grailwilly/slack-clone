@@ -5,12 +5,6 @@ export const userRegistration = (email, password, passwordConfirmation) => {
     formData.append('password', password);
     formData.append('password_confirmation', passwordConfirmation)
 
-  // const userProfile = {
-  //   "email": email,
-  //   "password": password,
-  //   "password_confirmation": password_confirmation
-  // }
-
   const requestOptions = {
     method: "POST",
     body: formData,

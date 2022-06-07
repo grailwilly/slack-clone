@@ -21,6 +21,9 @@ const UserRegistration = () => {
   const registrationSubmit = (e) => {
     e.preventDefault();
     userRegistration(email, password, passwordConfirmation);
+    setEmail("");
+    setPassword("");
+    setPasswordConfirmation("");
   }
 
   return (
