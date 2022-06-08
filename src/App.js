@@ -7,6 +7,7 @@ import {
 
 import Registration from './components/UserRegistration.js';
 import Login from './components/Login';
+import SendMessage from './components/SendMessage';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/create-account">
               <Registration />
+            </Route>
+            <Route path="/send-message">
+              <SendMessage />
             </Route>
           </Switch>
         </div>
