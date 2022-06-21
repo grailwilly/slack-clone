@@ -18,6 +18,10 @@ export const userLogin = (email, password) => {
       localStorage.setItem("uid", JSON.stringify(response.headers.get('uid')));
       return response.json();
     })
-    .then(result => console.log(result))
+    .then(result => {
+      if(!result.sucess){
+        alert(result.errors)
+      }
+    })
     .catch(error => console.log('error', error));
 }

@@ -15,9 +15,13 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    userLogin(email, password)
-    setEmail("");
-    setPassword("");
+    if(email === "" && password === "") {
+      alert("Fill required fields")
+    }else{
+      userLogin(email, password)
+      setEmail("");
+      setPassword("");
+    }
   }
 
   return (

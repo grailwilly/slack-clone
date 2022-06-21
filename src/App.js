@@ -4,12 +4,16 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import { useState } from "react";
 
 import Registration from './components/UserRegistration.js';
 import Login from './components/Login';
-import SendMessage from './components/SendMessage';
+import Dashboard from './components/Dashboard';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
+  const [loggedIn, setLogin] = useState(true);
+
   return (
     <div className="App">
       <Router>
@@ -20,9 +24,6 @@ function App() {
             </Route>
             <Route path="/create-account">
               <Registration />
-            </Route>
-            <Route path="/send-message">
-              <SendMessage />
             </Route>
           </Switch>
         </div>
